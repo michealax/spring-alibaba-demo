@@ -1,4 +1,5 @@
-package com.shane.alibaba;
+package com.shane.dubbo;
+
 
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;
@@ -6,10 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @EnableDubbo
-public class DubboDempApplication {
+public class DubboConsumerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DubboDempApplication.class, args);
+        SpringApplication.run(DubboConsumerApplication.class, args);
     }
 
 }

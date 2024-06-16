@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.shane.dubbo</groupId>
-    <artifactId>dubbo-provider</artifactId>
-    <version>0.0.1</version>
-    <name>dubbo-demp</name>
-    <description>dubbo-demp</description>
     <parent>
         <groupId>com.shane</groupId>
         <artifactId>alibaba</artifactId>
         <version>0.0.1</version>
     </parent>
-    <properties>
 
-    </properties>
+    <groupId>org.shane</groupId>
+    <artifactId>dubbo-consumer</artifactId>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
         <dependency>
             <groupId>com.shane</groupId>
             <artifactId>dubbo-interface</artifactId>
