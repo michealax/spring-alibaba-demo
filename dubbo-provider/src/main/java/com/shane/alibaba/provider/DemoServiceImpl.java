@@ -17,4 +17,10 @@ public class DemoServiceImpl implements DemoService {
         log.info("provider port: {}", port);
         return "Hello " + name;
     }
+
+    @Override
+    public String sayBye(String name) {
+        log.info("bye : {}", name);
+        return "Bye :" + name;
+    }
 }
