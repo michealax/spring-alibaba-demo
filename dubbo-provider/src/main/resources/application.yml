@@ -12,5 +12,10 @@ dubbo:
     name: dubbo
     port: -1
   registry:
+    address: zookeeper://192.168.31.49:2181?backup=192.168.31.49:2281,192.168.31.49:2381
+    protocol: zookeeper
 #    address: zookeeper://${zookeeper.address:106.14.216.125}:2181
-    address: zookeeper://106.14.216.125:2181
+#    address: zookeeper://106.14.216.125:2181
+
+zookeeper:
+  list: 192.168.31.49:2181,192.168.31.49:2281,192.168.31.49:2381

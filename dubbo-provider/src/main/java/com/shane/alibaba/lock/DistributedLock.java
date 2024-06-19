@@ -2,6 +2,7 @@ package com.shane.alibaba.lock;
 
 import org.apache.zookeeper.*;
 import org.apache.zookeeper.data.Stat;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
@@ -12,7 +13,8 @@ import java.util.concurrent.CountDownLatch;
 @Component
 public class DistributedLock {
 
-    private final String connetString = "106.14.216.125:2181";
+    @Value("${zookeeper.list}")
+    private final String connetString = "192.168.31.49:2181,192.168.31.49:2281,192.168.31.49:2381";
 
     private final int sessionTime = 2000;
 
