@@ -12,6 +12,8 @@
         <module>dubbo-provider</module>
         <module>dubbo-interface</module>
         <module>dubbo-consumer</module>
+        <module>nacos-registry</module>
+        <module>nacos-consumer</module>
     </modules>
     <properties>
         <dubbo.version>3.2.0-beta.4</dubbo.version>
@@ -19,6 +21,9 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <nacos.config.version>2021.0.1.0</nacos.config.version>
+        <spring-cloud.version>2021.0.5</spring-cloud.version>
+        <feign.version>4.1.2</feign.version>
     </properties>
     <dependencies>
         <dependency>
@@ -68,6 +73,32 @@
                 <version>${dubbo.version}</version>
                 <type>pom</type>
             </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+                <version>${nacos.config.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+                <version>${nacos.config.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openFeign</artifactId>
+                <version>${feign.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
