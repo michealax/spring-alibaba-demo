@@ -1,0 +1,9 @@
+server:
+  port: 8082
+rocketmq:
+  name-server: 127.0.0.1:9876
+  consumer:
+    group: msg-consumer
+    topic: first-topic-str
+    pull-batch-size: 10
+
